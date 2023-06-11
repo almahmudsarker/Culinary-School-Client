@@ -1,4 +1,4 @@
-# Taste & Learn Culinary School #
+# Taste & Learn - Culinary School #
 
 Welcome to Taste & Learn Culinary School! We are dedicated to providing a comprehensive culinary education and igniting a passion for cooking. Our mission is to empower aspiring chefs with the skills, knowledge, and cultural understanding necessary to excel in the world of gastronomy.
 
@@ -28,7 +28,7 @@ Welcome to Taste & Learn Culinary School! We are dedicated to providing a compre
 
 ## Visit our Website ##
 
-To explore our courses, workshops, and projects, visit our live site: [https://taste-and-learn.vercel.app/]( Taste & Learn Culinary School)
+To explore our courses, workshops, and projects, visit our live site: [https://culinary-adventure.web.app] ( Taste & Learn Culinary School)
 
 ## Contact Us ##
 To learn more about our culinary school, please contact us at: [almahmudsarker@baiust.edu.bd](mailto: almahmudsarker@baiust.edu.bd)
