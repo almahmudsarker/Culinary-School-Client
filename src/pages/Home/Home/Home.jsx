@@ -1,0 +1,21 @@
+import { Helmet } from "react-helmet-async";
+import Banner from "../Banner/Banner";
+import PopularMenu from "../PopularMenu/PopularMenu";
+import Testimonials from "../Testimonials/Testimonials";
+import Instructors from "../Instructors/Instructors";
+
+const Home = () => {
+    return (
+        <div>
+            <Helmet>
+                <title>Culinary School | Home</title>
+            </Helmet>
+            <Banner></Banner>
+            <PopularMenu></PopularMenu>
+            <Instructors></Instructors>
+            <Testimonials></Testimonials>
+        </div>
+    );
+};
+
+export default Home;
