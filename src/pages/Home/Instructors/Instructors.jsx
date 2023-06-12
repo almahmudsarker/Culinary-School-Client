@@ -6,7 +6,7 @@ const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    fetch("/src/assets/instructors.json")
+    fetch("http://localhost:5000/instructors")
       .then((response) => response.json())
       .then((data) => {
         // Sort the instructors based on the number of students

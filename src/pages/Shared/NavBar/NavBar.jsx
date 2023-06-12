@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useCart from "../../../hooks/useCart";
@@ -8,7 +7,6 @@ import useAdmin from "../../../hooks/useAdmin";
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [isAdmin] = useAdmin();
-    const [cart] = useCart();
 
     const handleLogOut = () => {
         logOut()
@@ -18,20 +16,11 @@ const NavBar = () => {
 
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Our Menu</Link></li>
-        <li><Link to="/order/salad">Order Food</Link></li>
+        <li><Link to="/instructors">Our Instructors</Link></li>
+        <li><Link to="/classes">Classes</Link></li>
         {
-            isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> : 
-            <li><Link to="/dashboard/userhome">Dashboard</Link></li>
+          user ? <Link className="mt-4 mr-4" to="/dashboard">Dashboard</Link> : <></>
         }
-        <li>
-            <Link to="/dashboard/mycart">
-                <button className="btn gap-2">
-                    <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                </button>
-            </Link>
-        </li>
         {
             user ? <>
                 <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
@@ -70,14 +59,25 @@ const NavBar = () => {
               </ul>
             </div>
             <a className="btn btn-ghost normal-case text-xl w-60">
-                Culinary School
+              Culinary School
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navOptions}</ul>
           </div>
-          <div className="navbar-end">
-            {/* <a className="btn">Get started</a> */}
+          <div className="navbar-end mr-3">
+            {user ? (
+              <div className="avatar">
+                <div
+                  className="rounded-full w-10 h-10 m-1 tooltip"
+                  data-tip={user?.displayName}
+                >
+                  <img src={user?.photoURL} alt={user?.displayName}/>
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </>
