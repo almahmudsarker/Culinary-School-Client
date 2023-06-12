@@ -21,5 +21,4 @@ const MenuCategory = ({items, title, img}) => {
         </div>
     );
 };
-
 export default MenuCategory;
