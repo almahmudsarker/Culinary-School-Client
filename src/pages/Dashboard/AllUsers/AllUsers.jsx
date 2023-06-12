@@ -33,7 +33,7 @@ const AllUsers = () => {
     }
 
     const handleDelete = user => {
-
+      //put code here
     }
 
     return (
