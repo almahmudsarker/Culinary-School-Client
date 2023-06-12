@@ -3,7 +3,7 @@
 const UserHome = () => {
     return (
         <div>
-            <h2>Regular user home</h2>
+            <h2>General User Dashboard</h2>
         </div>
     );
 };
